@@ -1,8 +1,8 @@
 {
   "name": "brain-games-learn-or-die",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "simple terminal game",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel-node": "babel-node",
@@ -12,7 +12,7 @@
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
-  "files" : [
+  "files": [
     "dist"
   ],
   "devDependencies": {
@@ -26,5 +26,8 @@
     "terminal_program"
   ],
   "author": "Rustamov Vadim",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
 }

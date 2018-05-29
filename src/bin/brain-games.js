@@ -1,3 +1,5 @@
-#! /usr/bin/nodejs
-console.log('Welcome to the Brain Games!');
+#!/usr/bin/env node
 
+import { getUserName, greeting } from '..';
+
+greeting(getUserName());
