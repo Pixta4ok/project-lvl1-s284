@@ -10,5 +10,5 @@ publish: clean build
 clean:
 	rm -rf dist
 
-build: clean
+build:
 	npm run build
