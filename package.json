@@ -1,6 +1,6 @@
 {
   "name": "brain-games-learn-or-die",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "simple terminal game",
   "main": "dist/index.js",
   "scripts": {
