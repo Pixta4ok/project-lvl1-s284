@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { getUserName, greeting } from '..';
+import askUser from '..';
 
-greeting(getUserName());
+console.log(`Hello ${askUser('May I have your name? ')}!`);

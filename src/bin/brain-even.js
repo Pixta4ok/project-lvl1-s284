@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { askUser, greeting } from '..';
+import askUser from '..';
 
 const sayWelcome = () => console.log('Welcome to Brain Games!');
 const tellGameRules = () => console.log('Answer "yes" if number even otherwise answer "no".\n');
@@ -26,5 +26,5 @@ const gameLoop = (userName, gameCount) => {
 sayWelcome();
 tellGameRules();
 const name = askUser('May I have your name? ');
-greeting(name);
+console.log(`Hello ${name}!`);
 gameLoop(name, 1);
