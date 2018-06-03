@@ -1,17 +1,17 @@
 import askUser from '..';
 
 const getRandomInt = () => Math.floor(Math.random() * (100 - 1)) + 1;
-const isNumberEven = number => ((number % 2) === 0 ? 'yes' : 'no');
-const gameLoopCount = 3;
+const isNumberEven = number => (number % 2) === 0;
+const maxGameLoopCount = 3;
 const gameLoop = (userName, gameCount) => {
-  if (gameCount > gameLoopCount) {
+  if (gameCount > maxGameLoopCount) {
     console.log(`Congratulations, ${userName}!`);
     return;
   }
 
-  const randomNumber = getRandomInt();
-  console.log(`Question: ${randomNumber}`);
-  const rightAnswer = isNumberEven(randomNumber);
+  const question = getRandomInt();
+  console.log(`Question: ${question}`);
+  const rightAnswer = isNumberEven(question) ? 'yes' : 'no';
   const userAnswer = askUser('Your answer: ');
   if (rightAnswer === userAnswer) {
     console.log('Correct!');
@@ -24,9 +24,9 @@ const gameLoop = (userName, gameCount) => {
 export default () => {
   console.log('Welcome to Brain Games!');
   console.log('Answer "yes" if number even otherwise answer "no".\n');
-  const name = askUser('May I have your name? ');
-  console.log(`Hello ${name}!\n`);
-  const startIndex = 1;
-  gameLoop(name, startIndex);
+  const userName = askUser('May I have your name? ');
+  console.log(`Hello ${userName}!\n`);
+  const startGameIndex = 1;
+  gameLoop(userName, startGameIndex);
 };
 
